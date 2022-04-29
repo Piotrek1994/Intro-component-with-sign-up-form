@@ -67,9 +67,12 @@ body {
 	margin-bottom: 1rem;
 	height: 60px;
 	width: 100%;
-
 	color: white;
 	border-radius: 10px;
+}
+
+.top-bar_try {
+	font-weight: 700;
 }
 
 .top-bar {
@@ -84,9 +87,10 @@ body {
 	flex-direction: column;
 	padding: 3rem;
 	width: 100%;
-	height: 600px;
 	background: white;
 	border-radius: 10px;
+	box-shadow: 0px 8px 2px rgba(0, 0, 0, 0.289);
+	
 }
 
 .input {
@@ -95,19 +99,24 @@ body {
 	height: 55px;
 	border-radius: 5px;
 	border: none;
-	border: 2px solid hsla(0, 100%, 74%, 0.65);
+	border: 1px solid hsla(0, 0%, 15%, 0.25);
 	font-size: 13px;
 	font-weight: 600;
 }
 
+.block {
+	margin-bottom: 1.2rem;
+}
+
 .block::before {
 	content: '';
+	display: none;
     position: absolute;
     left: 82%;
     transform: translate(0, 55%);
 	width: 25px;
 	height: 25px;
-    background-image: url('/images/icon-error.svg');
+    background-image: url('images/icon-error.svg');
     background-position: center;
     background-size: cover;
 }
@@ -117,7 +126,7 @@ body {
 }
 
 .warning {
-	display: flex;
+	display: none;
 	justify-content: flex-end;
 	padding-top: 5px;
 	color: hsl(0, 100%, 74%);
@@ -133,6 +142,11 @@ body {
 	font-weight: 700;
 	letter-spacing: 1px;
 	cursor: pointer;
+	transition: background .5s;
+}
+
+.btn:hover {
+	background: hsla(154, 59%, 51%, 0.5);
 }
 
 .terms {
