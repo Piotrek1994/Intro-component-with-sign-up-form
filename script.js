@@ -20,8 +20,8 @@ const showError = () => {
 		firstName.classList.remove('active')
 	}
 	lastNameFn()
-	emailFn()
 	passwordFn()
+	emailFn()
 }
 
 function lastNameFn() {
@@ -35,20 +35,20 @@ function lastNameFn() {
 function emailFn() {
 	if (inputEmail.value == '') {
 		email.classList.add('active')
-		validateEmail()
-	} else {
+	
+	} else if (inputEmail.value.match(reg)) {
 		email.classList.remove('active')
-		console.log('ok')
+	
 	}
 }
 
-function validateEmail() {
-	if (inputEmail.value.match(reg)) {
-		email.classList.remove('active')
-	} else {
-		email.classList.add('active')
-	}
-}
+// function validateEmail() {
+// 	if (inputEmail.value.match(reg)) {
+// 		email.classList.remove('active')
+// 	} else {
+// 		email.classList.add('active')
+// 	}
+// }
 
 function passwordFn() {
 	if (inputPassword.value == '') {
